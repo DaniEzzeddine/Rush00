@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import TopHeader from './Header'
 import {
   Container,
   Divider,
   Dropdown,
   Grid,
   Card,
-  Header,
   Icon,
   Image,
   List,
@@ -74,21 +74,7 @@ class FixedMenuLayout extends React.Component{
 }
   render(){
   return <div>
-    <Menu fixed='top' inverted>
-      <Container>
-        <Menu.Item as='a' header>
-          E-shop
-        </Menu.Item>
-        <Menu.Item as='a' header>
-        <Link to={{pathname: '/login', state: this.state}}>Signin</Link>
-          
-        </Menu.Item>
-        <Menu.Item as='a' position="right" header>
-        <Link to={{pathname: '/cart', state: this.state}}><Icon name="fitted cart"></Icon></Link>
-        </Menu.Item>
-        
-      </Container>
-    </Menu>
+    <TopHeader />
 
     <Container text style={{ marginTop: '7em' }}>
       {/* <Segment>

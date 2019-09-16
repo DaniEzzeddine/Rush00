@@ -6,7 +6,6 @@ import {
     Dropdown,
     Grid,
     Card,
-    Header,
     Icon,
     Image,
     List,
@@ -15,7 +14,7 @@ import {
     Select,
     Button
 } from 'semantic-ui-react'
-
+import TopHeader from './Header'
 const mock_data = [
     {
         id: 1,
@@ -71,21 +70,7 @@ class Cart extends React.Component {
     render() {
         return (
             <div>
-                <Menu fixed='top' inverted>
-                    <Container>
-                        <Menu.Item as='a' header>
-                            <Link to='/'>E-shop</Link>
-                        </Menu.Item>
-                        <Menu.Item as='signin' header>
-                            Signin
-        </Menu.Item>
-                        <Menu.Item as='cart' position="right" header>
-                            <Link to='/cart'><Icon name="fitted cart"></Icon></Link>
-                        </Menu.Item>
-
-                    </Container>
-                </Menu>
-
+                <TopHeader />
                 <Container text style={{ marginTop: '7em' }}>
                     <List animated verticalAlign='middle'>
                         {

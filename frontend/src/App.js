@@ -3,6 +3,7 @@ import './App.css';
 import FixedMenuLayout from './FixedMenuLayout';
 import Cart from './Cart';
 import LoginForm from './LoginForm';
+import SignUpForm from './SignupForm'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class App extends React.Component {
   constructor(props){
@@ -30,13 +31,18 @@ class App extends React.Component {
   }
   render(){
   return (
+    <div>
+    
     <Router>
       <div>
         <Route exact path="/" render={props => <FixedMenuLayout addToCart={this.addToCart} cart={this.state.cart} />} />
         <Route path="/cart" render={props => <Cart deleteFromCart={this.deleteFromCart} cart={this.state.cart} />} />
         <Route path="/login" render={props => <LoginForm />} />
+        <Route path="/signup" render={props => <SignUpForm />} />
       </div>
     </Router>
+    
+    </div>
   );
   }
 }
